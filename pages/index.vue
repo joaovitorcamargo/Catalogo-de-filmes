@@ -5,13 +5,13 @@
         <b-input v-model="info.title" placeholder="Digite o título de um filme"></b-input>
       </b-field>
     </b-field>
-    <b-field v-if="info.title == ''"></b-field>
+    <!-- <b-field v-if="info.title == ''"></b-field>
     <b-field v-else-if="info.title != ''" label="Ordenar Por">
       <b-select placeholder="Ordenar por" v-model="info.selected">
         <option>Padrão</option>
         <option @click="orderBy(title)">Titulo</option>
       </b-select>
-    </b-field>
+    </b-field>-->
 
     <div class="columns is-multiline">
       <movie-card
