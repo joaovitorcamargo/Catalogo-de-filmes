@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "movie",
-  props: ["movie", "remFav"],
+  props: ["movie", "selected"],
   data() {
     return {
       titleFav: [],
@@ -78,6 +78,16 @@ export default {
       this.loadFav();
       this.titleFav.splice(x, 1);
       this.saveFav();
+    },
+    orderBy() {
+      alert("dsadsa");
+    },
+  },
+  watch: {
+    selected: {
+      handler() {
+        this.orderBy();
+      },
     },
   },
 };

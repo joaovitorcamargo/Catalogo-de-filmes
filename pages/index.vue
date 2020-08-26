@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mobile">
     <b-field class="form-base">
       <b-field label="Título">
         <b-input v-model="info.title" placeholder="Digite o título de um filme"></b-input>
@@ -9,7 +9,7 @@
     <b-field v-else-if="info.title != ''" label="Ordenar Por">
       <b-select placeholder="Ordenar por" v-model="info.selected">
         <option>Padrão</option>
-        <option @click="orderBy(title)">Titulo</option>
+        <option>Titulo</option>
       </b-select>
     </b-field>-->
 
@@ -50,23 +50,11 @@ export default {
           this.info.movies = response.data.Search;
         });
     },
-    orderBy() {
-      this.info.movies.sort((a, b) => {
-        if (a < b) return -1;
-        if (a > b) return 1;
-        return 0;
-      });
-    },
   },
   watch: {
     "info.title": {
       handler() {
         this.getMovies();
-      },
-    },
-    "info.selected": {
-      handler() {
-        this.orderBy();
       },
     },
   },
@@ -80,5 +68,10 @@ export default {
 }
 .columns {
   margin-top: 2%;
+}
+@media only screen and (max-width: 600px) {
+  .mobile {
+    padding: 4%;
+  }
 }
 </style>

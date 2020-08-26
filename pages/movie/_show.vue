@@ -10,11 +10,11 @@
         <div class="info">
           <h2 class="titleMovie">{{info.Title}}</h2>
           <p>
-            <b>Ano de Lançamento:</b>
+            <b>Release Date:</b>
             {{info.Released}}
           </p>
           <p class="description">
-            <b>Sinopse:</b>
+            <b>Synopsis:</b>
             {{info.Plot}}
           </p>
           <p>
